@@ -1,0 +1,239 @@
+/**
+*** SIMPLE GRID + BASIC STYLES
+**/
+
+/****** IMPORTED FONTS ******/
+
+/* Raleway */
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,400i,600,600i');
+/* Open Sans*/
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i');
+
+
+/* ==========================================================================
+   GLOBAL STYLES
+   ========================================================================== */
+
+
+/* Box Sizing
+  ========================================================================== */
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Raleway', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+/* PARAGRAPHS
+  ========================================================================== */
+
+p {
+  font-size: 1em;
+  color: #0A0A0A;
+  margin: 0;
+  hyphens: auto;
+}
+
+/* HEADINGS
+  ========================================================================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Open Sans', sans-serif;
+  margin: 21px 0 0;
+  /* non-scalable fallback for old browsers */
+  margin-top: 1.5rem;
+  /* 21px, will be ignored by old browsers */
+}
+
+/* LINKS
+  ========================================================================== */
+
+a {
+  text-decoration: none;
+}
+
+a:link {
+  color: #ff6732;
+}
+
+a:visited {
+  color: #ff6732;
+}
+
+a:focus,
+a:hover {
+  border-bottom: 1px solid #ff6732;
+}
+
+a:active {
+  color: #ff9d00;
+}
+
+/* IMAGES
+  ========================================================================== */
+
+img {
+  height: auto;
+  width: auto;
+  /* max-width allows image to be responsive. */
+  max-width: 100%;
+}
+
+/* LISTS
+  ========================================================================== */
+li,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+
+/* ==========================================================================
+   GRID SYSTEM
+   ========================================================================== */
+
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.row {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  width: 100%;
+  margin-bottom: 0.5em;
+}
+
+.row [class^="col"] {
+  float: left;
+  margin: 0;
+  margin-right: 1%;
+}
+
+.row [class^="col"]:last-child {
+  margin-right: 0;
+}
+
+.col-1,
+.col-2,
+.col-3,
+.col-4,
+.col-5,
+.col-6,
+.col-7,
+.col-8,
+.col-9,
+.col-10,
+.col-11,
+.col-12 {
+  width: 100%;
+}
+
+.row::after {
+	content: "";
+	display: table;
+	clear: both;
+}
+
+
+/*
+** Remove the following style and class from html
+*/
+
+.item {
+  text-align: center;
+  height: 50px;
+  color: #000;
+  background-color: #FFFF22;
+  border: 1px solid #000;
+  border-radius: 5px;  
+}
+
+header, footer {
+  text-align: center;
+}
+
+
+/* ==========================================================================
+   TAB STYLES
+   ========================================================================== */
+
+@media only screen and (min-width: 45em) {  /* 720px */
+
+  .col-1 {
+    width: 8.25%;
+  }
+  
+  .col-2 {
+    width: 16.5%;
+  }
+  
+  .col-3 {
+    width: 24.75%;
+  }
+  
+  .col-4 {
+    width: 33%;
+  }
+  
+  .col-5 {
+    width: 41.25%;
+  }
+  
+  .col-6 {
+    width: 49.5%;
+  }
+  
+  .col-7 {
+    width: 57.75%;
+  }
+  
+  .col-8 {
+    width: 66%;
+  }
+  
+  .col-9 {
+    width: 74.25%;
+  }
+  
+  .col-10 {
+    width: 82.5%;
+  }
+  
+  .col-11 {
+    width: 90.75%;
+  }
+  
+  .col-12 {
+    width: 100%;
+  }
+}
+
+/* ==========================================================================
+   DESKTOP STYLES
+   ========================================================================== */
+
+@media only screen and (min-width: 75em) { /* 1440px */
+  .container {
+    max-width: 90rem;
+  }
+}
